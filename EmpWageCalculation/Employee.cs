@@ -8,23 +8,29 @@ namespace EmpWageCalculation
 {
     internal class Employee
     {
-        int isPrasent = 1;
+      const int isfulltime = 1;
+      const int isparttime = 2;
+
         Random random = new Random();
         int emphrs = 0, Wageperhts = 20;
         public void Attendence()
         {
-           
-            int result = random.Next(0, 2);
-            if (result == isPrasent)
+
+            int result = random.Next(0, 3);
+            if (result == 1)
             {
                 Console.WriteLine("employee is present");
                 emphrs += 8;
             }
+
+            else if (result == 2)
+            {
+                Console.WriteLine("employe is part time");
+                emphrs += 4;
+            }
             else
             {
                 Console.WriteLine("employee is absent");
-           
-          
             }
         }
         public int DailyWage()
