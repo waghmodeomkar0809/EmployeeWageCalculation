@@ -10,7 +10,7 @@ namespace EmpWageCalculation
     {
         int isPrasent = 1;
         Random random = new Random();
-
+        int emphrs = 0, Wageperhts = 20;
         public void Attendence()
         {
            
@@ -18,6 +18,7 @@ namespace EmpWageCalculation
             if (result == isPrasent)
             {
                 Console.WriteLine("employee is present");
+                emphrs += 8;
             }
             else
             {
@@ -25,6 +26,10 @@ namespace EmpWageCalculation
            
           
             }
+        }
+        public int DailyWage()
+        {
+            return emphrs * Wageperhts;
         }
     }
 }
